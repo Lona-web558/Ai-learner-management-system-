@@ -1,0 +1,137 @@
+:root {
+    --ink: #14213d;
+    --paper: #f5f7fb;
+    --teal: #0f9d8a;
+    --amber: #f2a33a;
+    --line: #dde3ee
+}
+body {
+    font-family: 'Source Sans 3',sans-serif;
+    background: var(--paper);
+    color: var(--ink)
+}
+h1,h2,h3,.brand {
+    font-family: 'Sora',sans-serif
+}
+.shell {
+    display: flex;
+    min-height: 100vh
+}
+.side {
+    width: 210px;
+    background: var(--ink);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    flex-shrink: 0
+}
+.side a {
+    color: #c9d3ea;
+    text-decoration: none;
+    padding: .55rem .75rem;
+    border-radius: 6px
+}
+.side a:hover,.side a.on {
+    background: #22335c;
+    color: #fff
+}
+.side a:focus-visible,.btn:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 2px
+}
+.side .brand {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem
+}
+.brand::before {
+    content: "";
+    display: inline-block;
+    width: .7rem;
+    height: .7rem;
+    background: var(--amber);
+    border-radius: 50%;
+    margin-right: .5rem
+}
+.content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 960px
+}
+.panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.25rem
+}
+.btn-teal {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff
+}
+.btn-teal:hover {
+    background: #0b8272;
+    color: #fff
+}
+.progress {
+    height: .5rem
+}
+
+.progress-bar {
+    background: var(--teal)
+}
+.lesson {
+    border-left: 4px solid var(--line);
+    padding-left: 1rem
+}
+
+.lesson.done {
+    border-color: var(--teal)
+}
+.chat {
+    height: 340px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem
+}
+.msg {
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    max-width: 80%;
+    white-space: pre-wrap
+}
+.msg.me {
+    align-self: flex-end;
+    background: var(--ink);
+    color: #fff
+}
+.msg.ai {
+    background: #e8f6f3;
+    border: 1px solid #bfe5de
+}
+@media(max-width:700px) {
+    .shell {
+        flex-direction: column
+    }
+
+    .side {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+
+    .side .brand {
+        width: 100%;
+        margin: 0
+    }
+
+    .content {
+        padding: 1rem
+    }}
+@media(prefers-reduced-motion:reduce) {
+    * {
+        transition: none!important
+    }}
